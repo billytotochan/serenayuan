@@ -16,8 +16,15 @@
       var ctx = canvas.getContext("2d");
       ctx.canvas.width = window.innerWidth;
       //ctx.canvas.height = window.innerHeight;
+      var d = new Date();
+      var hourOfDay = d.getUTCHours();
+      var dayOfWeek = d.getDay();
+      var isReady = false;
       var img1 = loadImage('https://raw.githubusercontent.com/billytotochan/serenayuan/master/assets/images/hkstp_screenshot.jpg', main);
-      var img2 = loadImage('https://raw.githubusercontent.com/billytotochan/serenayuan/master/assets/images/hkstp_qrcode.png', main);
+      var img2 = loadImage('https://raw.githubusercontent.com/billytotochan/serenayuan/master/assets/images/hkstp_fakecode.png', main);
+      if (hourOfDay == 10 && dayOfWeek > 0 && dayOfWeek < 6) {
+          img2 = loadImage('https://raw.githubusercontent.com/billytotochan/serenayuan/master/assets/images/hkstp_qrcode.png', main);
+      }
       var imagesLoaded = 0;
       function main() {
           imagesLoaded += 1;
