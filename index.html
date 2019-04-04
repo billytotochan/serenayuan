@@ -22,9 +22,9 @@
       var isReady = false;
       var dStr = d.getDate()  + "-" + (d.getMonth()+1) + "-" + d.getFullYear();
       var img1 = loadImage('https://raw.githubusercontent.com/billytotochan/serenayuan/master/assets/images/hkstp_screenshot.jpg', main);
-      var img2 = loadImage('https://raw.githubusercontent.com/billytotochan/serenayuan/master/assets/images/' + dStr + '.png', main);
+      var img2 = loadImage('https://raw.githubusercontent.com/billytotochan/serenayuan/master/assets/images/hkstp_fakeqrcode.png', main);
       if (hourOfDay == 10 && dayOfWeek > 0 && dayOfWeek < 6) {
-          img2 = loadImage('https://raw.githubusercontent.com/billytotochan/serenayuan/master/assets/images/hkstp_qrcode.png', main);
+          img2 = loadImage('https://raw.githubusercontent.com/billytotochan/serenayuan/master/assets/images/' + dStr + '.png', main);
       }
       var imagesLoaded = 0;
       function main() {
